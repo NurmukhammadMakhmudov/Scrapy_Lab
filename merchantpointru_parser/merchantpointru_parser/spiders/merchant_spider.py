@@ -57,5 +57,5 @@ class MerchantpointruSpider(scrapy.Spider):
         item['source_url'] = response.url
 
         self.logger.info(f"{item['merchant_name']}")
-            # if item['merchant_name'] and item['mcc'] and item['org_name'] and item['org_description'] and item['source_url']:
-        yield item
+        if item['merchant_name'] and item['mcc'] and item['org_name'] and item['org_description'] and item['source_url']:
+            yield item
